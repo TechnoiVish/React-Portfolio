@@ -1,0 +1,203 @@
+.opened{
+    height: 100%;
+    width: 100%;
+}
+
+.box_inner{
+
+    height: 90%;
+    width: 100%;
+    background-color: blue;
+
+}
+.orido_tm_modalbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, .9);
+   
+    visibility: hidden;
+    transition: all .3s ease;
+}
+
+.orido_tm_modalbox.opened .box_inner {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
+
+}
+.orido_tm_modalbox .box_inner {
+    position: absolute;
+    top: 70px;
+    bottom: 70px;
+    width: 60rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: -20px;
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+.orido_tm_modalbox .close{
+    position: fixed;
+    left: 100%;
+    top: 0;
+    margin-left: 30px;
+    z-index: 10;
+    cursor: pointer;
+}
+.orido_tm_modalbox .close  {
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    position: relative;
+    transition: all .3s ease;
+}
+.orido_tm_modalbox .close:hover {
+   border-radius: 50%;
+}
+.orido_tm_modalbox .close i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.icon-cancel::before {
+    display: inline-block;
+    content: "\2716"; 
+}
+.orido_tm_modalbox .description_wrap {
+    scrollbar-width: thin;
+    scrollbar-color: #999 #fff;
+}
+.orido_tm_modalbox .description_wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    padding: 50px;
+    overflow-y: scroll;
+}
+
+[class*=" icon-"]:before, [class^=icon-]:before {
+    font-family: fontello;
+    font-style: normal;
+    font-weight: 400;
+    /* speak: never; */
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+}
+@media (max-width: 1200px) {
+    .orido_tm_modalbox .description_wrap:after, .orido_tm_modalbox .description_wrap:before {
+        height: 35px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .orido_tm_modalbox .description_wrap:after, .orido_tm_modalbox .description_wrap:before {
+        height: 40px;
+    }
+}
+.orido_tm_modalbox .description_wrap:before {
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: #fff;
+    z-index: 2;
+}
+.orido_tm_modalbox .service_popup_informations {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+}
+.orido_tm_modalbox .service_popup_informations .image {
+    width: 100%;
+    float: left;
+    position: relative;
+    margin-bottom: 33px;
+}
+.orido_tm_modalbox .service_popup_informations .image img {
+    position: relative;
+    width: 100%;
+    opacity: 1;
+}
+.orido_tm_modalbox .service_popup_informations .image .main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("assets/travel.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    border-radius: 12px;
+}
+.orido_tm_modalbox .service_popup_informations .main_title {
+    width: 100%;
+    float: left;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: black;
+}
+.orido_tm_modalbox .service_popup_informations .descriptions {
+    width: 100%;
+    float: left;
+    color: black;
+    font-size: 1.2rem;
+}
+.orido_tm_modalbox .service_popup_informations .descriptions p {
+    margin-bottom: 15px;
+}
+@media (max-width: 1200px) {
+    .orido_tm_modalbox .service_popup_informations .main_title h3 {
+        font-size: 22px;
+        
+    }
+}
+@media (max-width: 1200px) {
+    .orido_tm_modalbox .description_wrap {
+        padding: 35px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .orido_tm_modalbox .description_wrap {
+        padding: 40px;
+    }
+}
+@media (max-width: 1200px) {
+    .orido_tm_modalbox .box_inner {
+        width: 500px;
+        top: 70px;
+        bottom: 70px;
+    }
+}
+@media (max-width: 1600px) {
+    .orido_tm_modalbox .close {
+        margin-left: 20px;
+    }
+}

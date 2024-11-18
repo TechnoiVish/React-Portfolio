@@ -1,0 +1,146 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    margin: 5vw auto;
+    max-width: 90%; /* Limits the width to 90% of the viewport */
+    width: 100%; /* Ensures full width for small screens */
+    box-sizing: border-box;
+}
+
+.about-title {
+    position: relative;
+    text-align: center;
+    /* width: 100%; */
+}
+
+.about-title h1 {
+    padding: 0;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 600;
+}
+
+.about-title img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: clamp(50px, 10vw, 120px);
+}
+
+.about-sections {
+    display: flex;
+    flex-direction: column; /* Stacks on smaller screens */
+    align-items: center;
+    gap: 3vw;
+    width: 100%; /* Ensures responsiveness */
+    max-width: 1200px; /* Limits to avoid overshooting wide screens */
+}
+
+.about-sections .profile {
+    width: 100%;
+    max-width: 300px; /* Restricts profile size */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px;
+}
+
+.about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    width: 100%;
+}
+
+.about-para {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.about-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.about-skill {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.about-skill p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.about-skill hr {
+    height: 0.4rem;
+    border-radius: 50px;
+    width: 100%;
+    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+}
+
+.about-achievements {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px; /* Restricts width for better layout */
+}
+
+.about-achievement {
+    flex: 1 1 calc(50% - 2rem); /* Responsive columns */
+    max-width: 300px; /* Restricts size */
+    text-align: center;
+}
+
+.about-achievement h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-achievement p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+@media (max-width: 768px) {
+    .about-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-achievement {
+        flex: 1 1 100%;
+    }
+
+    .about-title img {
+        width: 8vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title h1 {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+
+    .about-achievements hr {
+        height: 150px;
+    }
+
+    .about-achievements {
+        gap: 1rem;
+    }
+
+    .about-achievement h1 {
+        font-size: 2rem;
+    }
+}
