@@ -3,7 +3,8 @@ import './MyWork.css';
 import theme_pattern from '../../assets/theme_pattern.svg';
 import arrow_icon from '../../assets/arrow_icon.svg';
 import mywork_data from '../../assets/mywork_data';
-import { Link } from '@material-ui/core';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+// import { Link } from '@material-ui/core';
 
 const MyWork = () => {
   return (
@@ -26,15 +27,16 @@ const MyWork = () => {
             );
           })}
         </div>
-          <Link style={{"textDecoration":"none"}} href='https://github.com/TechnoiVish?tab=repositories' target='_blank'>
-        <div className="mywork-showmore">
+  
+         <AnchorLink style={{"textDecoration":"none"}} href='https://github.com/TechnoiVish?tab=repositories' target='_blank'>
+         <div className="mywork-showmore">
           
           <p>
             Show more
           </p>
           <img src={arrow_icon} height={22} width={22} alt="" />
         </div>
-          </Link>
+         </AnchorLink>
       </div>
     </>
   );
