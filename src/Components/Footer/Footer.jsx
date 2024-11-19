@@ -6,7 +6,7 @@ import welcome from '../../assets/A-1.png'
 import welcome_2 from '../../assets/A-name.png'
 import user_icon from '../../assets/user_icon.svg'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-
+import profile_pic from '../../assets/profile_pic.png'
 const Footer = () => {
     const [subs, setSubs] = useState("");
     const [email, setEmail] = useState("");
@@ -28,8 +28,8 @@ const Footer = () => {
             <img className="base-image" src={welcome} alt="Overlay" /><img className="anim_circle" src={welcome_2} alt="Background" /></a></div><div><h3>Let's work together</h3><p>You can express yourself however you want and whenever you want, for free. You can customize a template or make your own.</p></div></div>
             <div className="footer-top">
                 <div className="footer-top-left">
-                    <img src={footer_logo} alt="" />
-                    <p>I'm frontend developer with 2+ years of experience.</p>
+                    {/* <img src={profile_pic} alt="" height={250} /> */}
+                    <p>I'm frontend developer with 8 Months+ of experience.</p>
                 </div>
                 <div className="footer-top-right">
                     <div className="footer-email-input">
