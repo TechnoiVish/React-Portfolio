@@ -43,8 +43,8 @@ transition:0.5s;
     text-decoration:none;
    color:white;
 }
-.achor-link:hover{
-   color: #1F0016;
+.nav-menu .achor-link:hover{
+   color: #808080;
    transition: all 0.3s;
    
 }
